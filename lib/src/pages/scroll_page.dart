@@ -64,22 +64,38 @@ class ScrollPage extends StatelessWidget {
     return Stack(
       children: <Widget>[
         _colorFondo(),
-        Center(
-          child: RaisedButton(
-            shape: StadiumBorder(),
-            color: Colors.blue,
-            onPressed: (){
-              Navigator.pushNamed(context, "basico");
-            },
-            child: Container(
-              padding: EdgeInsets.all(15.0),
-              child: Text("Diseño Básico", style: TextStyle(fontSize: 20.0, color: Colors.white))
-              )
-          ),
-        )
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 60.0),
+          child: Column(    
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+               RaisedButton(
+               shape: StadiumBorder(),
+               color: Colors.blue,
+               onPressed: (){
+                 Navigator.pushNamed(context, "basico");
+               },
+               child: Container(
+                 padding: EdgeInsets.all(15.0),
+                 child: Text("Diseño Básico", style: TextStyle(fontSize: 20.0, color: Colors.white))
+                 )
+             ),
+             SizedBox(height: 20.0,),
+             RaisedButton(
+               shape: StadiumBorder(),
+               color: Colors.blue,
+               onPressed: (){
+                 Navigator.pushNamed(context, "gradiente");
+               },
+               child: Container(
+                 padding: EdgeInsets.all(15.0),
+                 child: Text("Diseño Menu", style: TextStyle(fontSize: 20.0, color: Colors.white))
+                 )
+             ),
+            ],
+            ),
+        ),
       ],
     );
-  }
-
-  
+  }  
 }
